@@ -20,6 +20,11 @@ mysqli_set_charset($conexão, "utf8mb4");
 <html lang = "pt-br">
 	<head>
 	<meta charset = "UTF-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
 		<title> Produtos cosmoeletro </title>
 		<!--CSS sendo acessado no arquivo esterno-->
 		<link rel= "stylesheet" href="./css/estilo.css">
@@ -28,11 +33,14 @@ mysqli_set_charset($conexão, "utf8mb4");
 	</head>
 
 	<body>
+
+		<div class="container-fluid">
 		<h1>ESCOLHA SEU PRODUTO E PAGUE COM BITCOIN (BTC)</h1>
+		</div>
 
 		<!--Inicio do menu-->
 	<?php
-		include_once("menu.html");
+		include_once("menu.php");
 	?>
 		<!--Final do menu-->
 

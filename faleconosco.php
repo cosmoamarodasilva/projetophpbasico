@@ -32,22 +32,31 @@
 <html lang = "pt-br">
 	<head>
 	<meta charset = "UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
 		<title>Fale com nosco</title>
 		<link rel= "stylesheet" href="./css/estilo.css">
 	</head>
 
 	<body>
+
+		<div class="container-fluid">
 		<h1>COSMOELETRO</h1>
+		</div>
 
 		<!--Inicio do menu-->
 	<?php
-		include_once("menu.html");
-	?>
+		include_once("menu.php");
+	?><br><br>
 		<!--Final do menu-->
 
 		<!--Inicio dos contatos-->
-		<h2>fale conosco</h2>
+		<center><h2>fale conosco</h2></center>
 		<hr>
+		
 		<table border = 0 width="100%" cellpadding="20%">
 			<tr>
 				<td width="50%" align="center">
@@ -65,14 +74,20 @@
 		<!--Fim do contato-->
 
 		<!--Formulario de mensagem-->
+		
 		<form method="post" action="">
-			<h4>Nome:</h4>
-			<input type="text" name="nome" style="width: 300px;">
-			<h4>Mensagem:</h4>
-			<input type="text" name="mensagem" style="width: 300px;"><br><br>
-			<input type="submit" value="Enviar">
+			<div class="form-group">
+				<label for="nome">Seu nome</label>
+				<input type="text" name="nome" class="form-control" id="nome" aria-describedby="emailHelp"
+				placeholder="Digite seu nome">
+			</div>
+			<div class="form-group">
+				<label for="mensagem">Digite sua mensagem</label>
+				<input type="text" name="mensagem" class="form-control" id="email" aria-describedby="emailHelp"
+				placeholder="Digite sua mensagem">
+			</div>
+			<button type="submit" class="btn btn-primary">Enviar</button>
 		</form>
-
 
 	</body>
 	
